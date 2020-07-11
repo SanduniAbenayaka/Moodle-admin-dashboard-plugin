@@ -12,7 +12,7 @@ function block_admincourseview_course_context($courseid) { //get login page data
     }
 }
 
-
+ // create dropdown menu
  function dropdown_selector_form($id,$courseid,$userid) {
  
  
