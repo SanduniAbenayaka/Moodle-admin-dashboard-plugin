@@ -1,10 +1,10 @@
 <?php
 
 require_once(dirname(__FILE__) . '/../../config.php');
-require_once($CFG->dirroot.'/blocks/myblock/dropdown.php');
+require_once($CFG->dirroot.'/blocks/admincourseview/dropdown.php');
 
 
-function block_myblock_course_context($courseid) { //get login page data
+function block_admincourseview_course_context($courseid) { //get login page data
     if (class_exists('context_course')) {
         return context_course::instance($courseid);
     } else {
