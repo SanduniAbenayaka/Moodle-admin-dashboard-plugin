@@ -1,6 +1,6 @@
 <?php
-$string['pluginname']='My Block block';
-$stinrg['myblock']='My Block';
+$string['pluginname']='Admincourseview block';
+$stinrg['admincourseview']='My admincourseview ';
 $stinrg['overview']='overview of students';
-$stinrg['myblock:addinstance']='Add a new My Block block';
-$stinrg['myblock:myaddinstance']='Add a new My Block block to the my moodle page';
+$stinrg['admincourseview:addinstance']='Add a new My Block block';
+$stinrg['admincourseview:myaddinstance']='Add a new My Block block to the my moodle page';
