@@ -1,7 +1,7 @@
 <?php
 
 require_once(dirname(__FILE__) . '/../../config.php');
-require_once($CFG->dirroot.'/blocks/myblock/lib.php');
+require_once($CFG->dirroot.'/blocks/admincourseview/lib.php');
 
 define('USER_SMALL_CLASS', 20);   
 define('USER_LARGE_CLASS', 200);  
@@ -16,7 +16,7 @@ $perpage  = optional_param('perpage', DEFAULT_PAGE_SIZE, PARAM_INT);
 $group    = optional_param('group', 0, PARAM_INT); 
 
 $course = $DB->get_record('course', array('id' => $courseid), '*', MUST_EXIST);
-$context = block_myblock_course_context($courseid);
+$context = block_admincourseview_course_context($courseid);
 
 $loginblock = $DB->get_record('block_instances', array('id' => $id), '*', MUST_EXIST);
 $loginsconfig = unserialize(base64_decode($loginblock->configdata));
@@ -24,7 +24,7 @@ $loginsconfig = unserialize(base64_decode($loginblock->configdata));
 $PAGE->set_course($course);
 
 $PAGE->set_url(
-    '/blocks/myblock/overview.php',
+    '/blocks/admincourseview/overview.php',
     array(
         'logingraphid' => $id,
         'courseid' => $courseid,
@@ -45,7 +45,7 @@ require_login($course, false);
 echo $OUTPUT->header();
 echo $OUTPUT->heading($title, 2);
 
-echo $OUTPUT->container_start('block_myblock');
+echo $OUTPUT->container_start('block_admincourseview');
 
 echo '<div class="graph">';
 dropdown_selector_form($id,$courseid,$userid);
