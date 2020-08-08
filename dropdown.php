@@ -12,7 +12,7 @@ function block_graph_get_year_id($year){
     }
     return $year_id;
 }
-
+// add relavant id from course category 
 function block_graph_get_course_id($course, $year_id){
     global $DB;
     $course_c = $DB->get_records_sql("SELECT id FROM {course_categories} WHERE name='$course' AND parent ='$year_id'");
